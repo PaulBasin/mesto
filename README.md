@@ -1,17 +1,13 @@
 # Проект 4: Место
 
-### Обзор
+Ссылка на Github Pages
 
-* Figma
-* Картинки
+[https://paulbasin.github.io/mesto/](https://paulbasin.github.io/mesto/)
 
-**Figma**
+[Ссылка на макет в Figma](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4)
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4)
+Адаптивный макет страницы, сделан с файловой структурой по БЭМ nested, использованы технологии flexbox и grid layout. Свёрстан попап с формой, работающи на javascript
 
-**Картинки**
 
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
 
-Удачи!
+
