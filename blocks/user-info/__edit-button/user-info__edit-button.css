@@ -1,0 +1,15 @@
+.user-info__edit-button {
+  width: 24px;
+  height: 24px;
+  border: none;
+  padding: 0;
+  margin-left: 18px;
+}
+
+@media screen and (max-width: 700px) {
+  .user-info__edit-button {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+  }
+}
