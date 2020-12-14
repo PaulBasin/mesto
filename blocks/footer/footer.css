@@ -1,16 +1,17 @@
 .footer {
   width: calc(100% - 400px);
   display: flex;
-  margin: 7px auto 0;
-  min-height: 140px;
-  align-items: center;
+  margin: 0 auto;
   box-sizing: border-box;
+  padding: 67px 0 60px ;
+  align-items: center;
+
 }
 
 @media screen and (max-width: 1024px) {
   .footer {
     width: calc(100% - 200px);
-    min-height: 86px;
+    padding: 48px 0 36px ;
   }
 }
 
