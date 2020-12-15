@@ -1,12 +1,11 @@
 .user-info__data {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   max-width: 360px;
   margin: 0 0 0 30px;
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1080px) {
   .user-info__data {
     margin: 0 10px 0 10px;
   }
