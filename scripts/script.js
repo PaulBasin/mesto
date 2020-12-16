@@ -1,41 +1,42 @@
-const editButton = document.querySelector('.user-info__edit-button');
-const popup = document.querySelector('.popup');
-const popupCloseButton = document.querySelector('.popup__close');
-const popupForm = document.forms.edit;
+let editButton = document.querySelector('.user-info__edit-button');
+let popup = document.querySelector('.popup');
+let popupCloseButton = document.querySelector('.popup__close');
+let popupForm = document.forms.edit;
+let popupInputName = document.querySelector('.popup__input_type_name');
+let popupInputJob = document.querySelector('.popup__input_type_job');
+let inputName = document.querySelector('.user-info__name');
+let inputJob = document.querySelector('.user-info__job');
 
+// функция открывающая попап и присваивающая текстовые значения профайла
+// значениям инпутов
 
 function openPopup (e) {
-  const inputName = document.querySelector('.user-info__name').textContent;
-  const inputJob = document.querySelector('.user-info__job').textContent;
 
-  const name = popupForm["name"];
-  const job = popupForm["job"];
-
-  name.value = inputName;
-  job.value = inputJob;
+  popupInputName.value = inputName.textContent;;
+  popupInputJob.value = inputJob.textContent;
 
   popup.classList.add('popup_opened');
 }
+
+// функция закрытия попапа
 
 function closePopup(e) {
   popup.classList.remove('popup_opened');
 }
 
+// функция для кнопки попапа присваивающая данные инпутов текстовым значениям
+// профайла и закрывающая попап
+
 function changeValues(e) {
   e.preventDefault();
 
-  const inputName = document.querySelector('.user-info__name');
-  const inputJob = document.querySelector('.user-info__job');
-
-  const name = popupForm["name"];
-  const job = popupForm["job"];
-
-  inputName.textContent = name.value;
-  inputJob.textContent = job.value;
+  inputName.textContent = popupInputName.value;
+  inputJob.textContent = popupInputJob.value;
 
   closePopup();
 }
 
+// обработчики событий
 
 editButton.addEventListener('click', openPopup);
 popupCloseButton.addEventListener('click', closePopup);
