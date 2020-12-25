@@ -1,4 +1,4 @@
-.cards-list {
+.cards-container {
   display: grid;
   max-width: 900px;
   justify-content: center;
@@ -9,13 +9,13 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .cards-list {
+  .cards-container {
     width: calc(100% - 200px);
   }
 }
 
 @media screen and (max-width: 700px) {
-  .cards-list {
+  .cards-container {
     width: 100%;
   }
 }

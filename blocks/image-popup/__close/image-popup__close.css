@@ -1,9 +1,11 @@
-.popup__close {
-  position: absolute;
-  top: -40px;
-  right: -37px;
+.image-popup__close {
   width: 40px;
   height: 40px;
+  position: absolute;
+  top: -40px;
+  right: -38px;
+  cursor: pointer;
+  z-index: 2;
   cursor: pointer;
   outline: none;
   border: 0;
@@ -14,10 +16,11 @@
 }
 
 @media screen and (max-width: 475px) {
-  .popup__close {
-    top: -40px;
-    right: 0px;
+  .image-popup__close {
+    top: -31px;
+    right: -30px;
     width: 26px;
     height: 26px;
   }
 }
+
