@@ -32,9 +32,9 @@
       </section>
     </main>
 
-    <div class="image-popup">
+    <div id="popup-image" class="popup image-popup">
       <div class="image-popup__content">
-        <button type="button" aria-label="Close" id="image-popup-close" class="image-popup__close"></button>
+        <button type="button" aria-label="Close" id="popup-image-close" class="popup__close"></button>
         <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" alt="фотография карточки" class="image-popup__image">
         <p class="image-popup__title">Архыз</p>
       </div>
@@ -59,7 +59,7 @@
         <form class="popup__form" name="add">
           <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название">
           <input type="text" name="link" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку">
-          <button type class="button popup__button">Создать</button>
+          <button type="submit" class="button popup__button">Создать</button>
         </form>
       </div>
     </div>
@@ -70,9 +70,8 @@
 
     <template id="card">
       <article class="card">
-        <div class="card__image">
-          <button class="card__delete-button"></button>
-        </div>
+        <button class="card__delete-button"></button>
+        <div class="card__image"></div>
         <div class="card__desciption">
           <h3 class="card__name">Карачаевск</h3>
           <button type="button" aria-label="Like" class="card__like-button"></button>
