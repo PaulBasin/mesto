@@ -100,7 +100,6 @@ function createCard (value) {
   const cardTemplate = document.querySelector('#card').content;
   const card = cardTemplate.querySelector('.card').cloneNode(true);
 
-  card.querySelector('.card__image').style.backgroundImage = `url(${value.link})`;
   card.querySelector('.card__name').textContent = value.name;
 
   card.querySelector('.card__like-button').addEventListener('click', function (evt) {
