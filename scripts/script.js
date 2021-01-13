@@ -60,7 +60,7 @@ function closePopup (popup) {
 // значениям инпутов
 
 
-function openEditPopup (e) {
+function openEditPopup () {
   popupInputName.value = inputName.textContent;;
   popupInputJob.value = inputJob.textContent;
 
@@ -68,7 +68,7 @@ function openEditPopup (e) {
 }
 
 // функция закрытия попапа редактирования профиля
-function closeEditPopup(e) {
+function closeEditPopup() {
   closePopup(editPopup);
 }
 
@@ -86,13 +86,13 @@ function changeValues(e) {
 // фукции добавляющие и рендаряющие новые карточки
 
 // функция открытия попопа добавления карточки
-function openAddPopup (e) {
+function openAddPopup () {
   openPopup(addPopup)
 }
 
 // функция закрытия попопа добавления карточки
-function closeAddPopup(e) {
-  closePopup(addPopup)
+function closeAddPopup() {
+  closePopup(addPopup);
 }
 
 // функция клонирует template карточки, лайкает карточки и удаляет их
@@ -150,12 +150,31 @@ function closeImagePopup() {
   closePopup(imagePopup);
 }
 
+function closePopupOverlay (evt) {
+  if (evt.target.classList.contains('popup_opened')) {
+    closePopup(document.querySelector('.popup_opened'))
+  }
+}
+
+function closePopupEscape (evt) {
+  if (evt.key === 'Escape') {
+    closePopup(document.querySelector('.popup_opened'));
+  }
+}
+
 // обработчики событий
 editButton.addEventListener('click', openEditPopup);
 editPopupCloseButton.addEventListener('click', closeEditPopup);
-editProfileForm.addEventListener('submit', changeValues);
 addButton.addEventListener('click', openAddPopup);
 addPopupCloseButton.addEventListener('click', closeAddPopup);
+imagePopupCloseButton.addEventListener('click', closeImagePopup);
+editProfileForm.addEventListener('submit', changeValues);
+document.addEventListener('keydown', closePopupEscape);
+document.addEventListener('click', closePopupOverlay);
 renderCards(initialCards);
 addCardform.addEventListener('submit', addCard);
-imagePopupCloseButton.addEventListener('click', closeImagePopup);
+
+
+
+
+
