@@ -45,9 +45,8 @@ function openEditPopup (evt) {
   openPopup(editPopup);
 }
 
-// функция для кнопки попапа редактирования профиля, присваивающая данные инпутов текстовым значениям
-// профиля и закрывающая попап
-function changeValues (evt) {
+// функция для кнопки попапа редактирования профиля, присваивающая данные инпутов текстовым значениям профиля и закрывающая попап
+function changeProfileInfo (evt) {
   evt.preventDefault();
 
   inputName.textContent = popupInputName.value;
@@ -83,11 +82,9 @@ function addCard (evt) {
 
 
 // добавления карточек в блок со всеми карточками
-initialCards.map((element) => {
+initialCards.forEach((element) => {
   const newCard = createCard(element, '.card-template');
   cardsContainer.append(newCard);
-
-  return newCard;
  });
 
 
@@ -97,6 +94,6 @@ editPopupCloseButton.addEventListener('click', () => closePopup(editPopup));
 addButton.addEventListener('click',  () => openPopup(addPopup));
 addPopupCloseButton.addEventListener('click', () => closePopup(addPopup));
 imagePopupCloseButton.addEventListener('click', () => closePopup(imagePopup));
-editProfileForm.addEventListener('submit', changeValues);
+editProfileForm.addEventListener('submit', changeProfileInfo);
 addCardform.addEventListener('submit', addCard);
 
