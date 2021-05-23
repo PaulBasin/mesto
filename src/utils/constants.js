@@ -1,5 +1,4 @@
-// массив я данными карточек
-const initialCards = [
+export const initialCards = [
   {
     name: 'Архыз',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
@@ -27,7 +26,7 @@ const initialCards = [
 ];
 
 // конфиг для валидации
-const validationClasses = {
+export const validationClasses = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__button',
@@ -37,29 +36,27 @@ const validationClasses = {
 };
 
 // переменные попапа добавления карточки
-const popup = document.querySelector('.popup');
-const addButton = document.querySelector('.profile__add-button');
-const addPopup = document.querySelector('#popup-add-card');
-const addPopupCloseButton = document.querySelector('#popup-add-close');
-// const addCardform = document.forms.add;
-const addCardform = document.querySelector('.popup__form-add');
-const cardsContainer = document.querySelector('.cards-container');
+export const popup = document.querySelector('.popup');
+export const addButton = document.querySelector('.profile__add-button');
+export const addPopup = document.querySelector('#popup-add-card');
+export const addPopupCloseButton = document.querySelector('#popup-add-close');
+export const addCardform = document.querySelector('.popup__form-add');
+export const cardsContainer = document.querySelector('.cards-container');
 
 // переменные попапа редактирования профиля
-const editButton = document.querySelector('.user-info__edit-button');
-const editPopup = document.querySelector('#popup-edit-profile');
-// const editProfileForm = document.forms.edit;
-const editProfileForm = document.querySelector('.popup__form-edit');
-const editPopupCloseButton = document.querySelector('#popup-edit-close');
-const popupInputName = document.querySelector('.popup__input_type_name');
-const popupInputJob = document.querySelector('.popup__input_type_job');
-const inputName = document.querySelector('.user-info__name');
-const inputJob = document.querySelector('.user-info__job');
+export const editButton = document.querySelector('.user-info__edit-button');
+export const editPopup = document.querySelector('#popup-edit-profile');
+export const editProfileForm = document.querySelector('.popup__form-edit');
+export const editPopupCloseButton = document.querySelector('#popup-edit-close');
+export const popupInputName = document.querySelector('.popup__input_type_name');
+export const popupInputJob = document.querySelector('.popup__input_type_job');
+export const inputName = document.querySelector('.user-info__name');
+export const inputJob = document.querySelector('.user-info__job');
 
 // переменные для попапа карточек
-const imagePopup = document.querySelector('#popup-image');
-const imagePopupCloseButton = document.querySelector('#popup-image-close');
-const imagePopupPicture = document.querySelector('.image-popup__image');
-const imagePopupTitle = document.querySelector('.image-popup__title');
+export const imagePopup = document.querySelector('#popup-image');
+export const imagePopupCloseButton = document.querySelector('#popup-image-close');
+export const imagePopupPicture = document.querySelector('.image-popup__image');
+export const imagePopupTitle = document.querySelector('.image-popup__title');
 
-const root = document.querySelector('.root');
+export const root = document.querySelector('.root');
