@@ -7,6 +7,11 @@ export class FormValidator {
     this._buttonSelector = this._formElement.querySelector(this._classes.submitButtonSelector);
   }
 
+  _disableSubmitButton() {
+    this._buttonSelector.classList.add(this._classes.inactiveButtonClass);
+    this._buttonSelector.setAttribute("disabled", true);
+  }
+
   // проверяем каждый ли инпут в форме валиден
   _inputValidity() {
     return this._inputList.some(inputElement => !inputElement.validity.valid);
@@ -14,9 +19,10 @@ export class FormValidator {
 
   // следим за состоянием кнопки формы
   setButtonState() {
+    this._disableSubmitButton();
+
     if (this._inputValidity()) {
-      this._buttonSelector.classList.add(this._classes.inactiveButtonClass);
-      this._buttonSelector.setAttribute('disabled', true);
+      this._disableSubmitButton();
     } else {
       this._buttonSelector.classList.remove(this._classes.inactiveButtonClass);
       this._buttonSelector.removeAttribute('disabled');
@@ -56,6 +62,8 @@ export class FormValidator {
 
       this.setButtonState();
     });
+
+    this._disableSubmitButton();
   };
 
   deleteErrors() {
@@ -67,6 +75,7 @@ export class FormValidator {
   enableValidation() {
     this._formElement.addEventListener("submit", (evt) => {
       evt.preventDefault();
+      this._disableSubmitButton();
     });
     this._setEventListeners();
   };

@@ -11,7 +11,7 @@ import {
   popupInputJob,
 } from "../utils/Constants.js";
 
-import { createCard } from "../utils/Utils.js";
+import { Card } from "../components/Card.js";
 
 import { FormValidator } from "../components/FormValidator.js";
 
@@ -25,15 +25,24 @@ import { Section } from "../components/Section.js";
 import "./index.css";
 
 
+export const createCard = (dataElement) => {
+  const card = new Card(dataElement, ".card-template", (name, link) => {
+    popupOpenImage.open(name, link);
+  });
+
+  const cardElement = card.generateCard();
+  return cardElement;
+}
+
 const cardList = new Section(
   {
     data: initialCards,
-    renderer: (card) => { return createCard(card); }
+    renderItems: (card) => { return createCard(card); }
   },
   ".cards-container"
 );
 
-cardList.renderer();
+cardList.renderItems();
 
 const formAddValidation = new FormValidator(validationClasses, addPopup);
 formAddValidation.enableValidation();
@@ -48,11 +57,13 @@ const userInfoValues = new UserInfo(inputName, inputJob);
 
 const popupOpenProfile = new PopupWithForm("#popup-edit-profile", (formValues) => {
   userInfoValues.setUserInfo(formValues);
+  popupOpenProfile.close();
 });
 popupOpenProfile.setEventListeners();
 
 const popupOpenAddCard = new PopupWithForm("#popup-add-card", (formValues) => {
   cardList.addItem(createCard(formValues));
+  popupOpenAddCard.close();
 });
 popupOpenAddCard.setEventListeners();
 
