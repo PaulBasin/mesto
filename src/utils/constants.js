@@ -19,7 +19,6 @@ export const popupDelete = "#popup-delete-card";
 export const popupInputName = document.querySelector('.popup-edit-profile .popup__input_type_name');
 export const popupInputJob = document.querySelector('.popup__input_type_job');
 
-//
 export const popupImageTitle = document.querySelector(".image-popup__title");
 export const popupImagePicture = document.querySelector(".image-popup__image");
 export const cardName = document.querySelector(".popup-add-card .popup__input_type_name");

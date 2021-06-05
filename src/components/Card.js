@@ -46,7 +46,6 @@ export default class Card {
 
   _handleRemoveClick() {
     this._element.remove();
-    // document.querySelector('.popup_type_delete-card').classList.add('popup_opened');
   }
 
   _handleLikeClick() {
