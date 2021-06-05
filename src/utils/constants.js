@@ -1,29 +1,37 @@
-export const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
+export const elementTemplate = '.card-template';
+
+// кнопки открытия попапов
+export const avatar = document.querySelector(".user-info__photo"); // заменить src на background-image!!
+export const buttonOpenEditPopup = document.querySelector(".user-info__edit-button");
+export const buttonOpenNewCardPopup = document.querySelector(".profile__add-button");
+
+// кнопки закрытия попапов
+export const buttonCloseEditPopup = document.querySelector("#popup-edit-close");
+export const buttonCloseImagePopup = document.querySelector("#popup-image-close");
+export const buttonCloseNewCardPopup = document.querySelector("№popup-add-close");
+
+// селекторы попапов
+export const popupAvatar = "#popup-change-avatar"
+export const popupEdit = "#popup-edit-profile";
+export const popupNewCard = "#popup-add-card";
+export const popupImage = "#popup-image";
+export const popupDelete = "#popup-delete-card";
+export const popupInputName = document.querySelector('.popup-edit-profile .popup__input_type_name');
+export const popupInputJob = document.querySelector('.popup__input_type_job');
+
+//
+export const popupImageTitle = document.querySelector(".image-popup__title");
+export const popupImagePicture = document.querySelector(".image-popup__image");
+export const cardName = document.querySelector(".popup-add-card .popup__input_type_name");
+export const cardUrl = document.querySelector(".popup-add-card .popup__input_type_link");
+export const changeInputName = document.querySelector(".user-info__name");
+export const changeInputJob = document.querySelector(".user-info__job");
+export const cards = document.querySelector('.cards-container');
+
+
+export const formEditElement = document.querySelector('.popup__form-edit')
+export const formNewCardElement = document.querySelector('.popup__form-add')
+export const formAvatarElement = document.querySelector('.popup__form-change')
 
 // конфиг для валидации
 export const validationClasses = {
@@ -35,28 +43,3 @@ export const validationClasses = {
   errorClass: 'popup__error_visible'
 };
 
-// переменные попапа добавления карточки
-export const popup = document.querySelector('.popup');
-export const addButton = document.querySelector('.profile__add-button');
-export const addPopup = document.querySelector('#popup-add-card');
-export const addPopupCloseButton = document.querySelector('#popup-add-close');
-export const addCardform = document.querySelector('.popup__form-add');
-export const cardsContainer = document.querySelector('.cards-container');
-
-// переменные попапа редактирования профиля
-export const editButton = document.querySelector('.user-info__edit-button');
-export const editPopup = document.querySelector('#popup-edit-profile');
-export const editProfileForm = document.querySelector('.popup__form-edit');
-export const editPopupCloseButton = document.querySelector('#popup-edit-close');
-export const popupInputName = document.querySelector('.popup__input_type_name');
-export const popupInputJob = document.querySelector('.popup__input_type_job');
-export const inputName = document.querySelector('.user-info__name');
-export const inputJob = document.querySelector('.user-info__job');
-
-// переменные для попапа карточек
-export const imagePopup = document.querySelector('#popup-image');
-export const imagePopupCloseButton = document.querySelector('#popup-image-close');
-export const imagePopupPicture = document.querySelector('.image-popup__image');
-export const imagePopupTitle = document.querySelector('.image-popup__title');
-
-export const root = document.querySelector('.root');

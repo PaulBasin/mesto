@@ -5,5 +5,13 @@
   border-radius: 50%;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
   background-image: url(../../../images/avatar.jpg);
+}
+
+.user-info__photo:hover {
+  opacity: 0.3;
+  /* background-image: url(../../../src/images/avatar_edit.svg); */
+  background-position: center;
+  background-repeat: no-repeat;
 }
